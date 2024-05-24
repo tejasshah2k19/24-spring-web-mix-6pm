@@ -1,0 +1,84 @@
+jar file -> boot -> jsp -> enable 
+
+tomcat embeded jasper + maven 
+
+----------------------------------------------------------------------
+
+jsp -> webapp -> 
+
+to add jsp we need webapp folder 
+		create webapp folder! 
+src->main->		
+	webapp 
+	
+------------------------------------------------------
+src main ->
+			1) java    {java-code class logic db } 
+			2) resources { css js images properties  } 
+			3) webapp  {web browser : jsp , htlm }  
+-------------------------------------------------------
+create folders -> 
+	src->main->java->com 
+						controller 
+						dao 
+						bean
+						util
+						
+--------------------------------------------------------
+create jsp welcome -> run 
+--------------------------------------------------------
+configuration -> application.properties {boot}
+		server.port 
+--------------------------------------------------------
+
+adv java -> controller -> servlet ->
+			class extends HttpServlet 
+			service()
+			@WebServelt / web.xml 
+			1 controller : 1 feature 
+			
+			LoginController : 
+			SignupController :
+			ForgetPasswordController : 
+			
+
+
+spring -> controller -> 
+				class : @Controller    
+				feature wise method 
+				method -> url 
+				
+				public	String	login():url /login 
+				public	String	signup():url /signup 
+				public	String	forgetPassword():url /fp 
+
+				return type -> jsp page name ->  
+------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
