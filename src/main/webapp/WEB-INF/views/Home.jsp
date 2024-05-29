@@ -7,6 +7,12 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h2>Signup</h2>
+<h2>Home</h2>
+ 
+FirstName : ${user.firstName}<br>
+Email : ${user.email }<br>
+Password : ${user.password }<br>
+
+
 </body>
 </html>
