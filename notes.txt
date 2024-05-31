@@ -56,7 +56,23 @@ spring -> controller ->
 ------------------------------------------------------------
 
 
+input -> jsp 
 
+process -> controller 
+
+dao -> query 
+
+? 
+M : data {bean,dao}
+V : input output 
+C : logic  
+
+filter 
+validators
+service 
+
+MVVM ->  
+---------------------------------------------
 
 
 
