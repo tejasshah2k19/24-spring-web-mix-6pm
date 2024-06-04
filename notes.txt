@@ -75,7 +75,10 @@ MVVM ->
 ---------------------------------------------
 
 
+validation -> 
 
+		1) front-end : JS : browser  
+		2) back-end  : java : server-side 
 
 
 
