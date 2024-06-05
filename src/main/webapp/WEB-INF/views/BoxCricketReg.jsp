@@ -9,7 +9,7 @@
 	<h2>Box Cricket Registration</h2>
 
 	<form action="savereg" method="post">
-		Name  : <input type="text" name="studentName"/>
+		Name  : <input type="text" name="studentName" value="${studentNameValue}"/>
 					<span style="color:red">${studentNameError}</span>
 		<br><Br>
 		
@@ -17,7 +17,7 @@
 						Batsman <input type="radio" name="playerType" value="Batsman"/>
 						Bowller <input type="radio" name="playerType" value="Bowller"/>
 						AllRounder 	 <input type="radio" name="playerType" value="AllRounder"/>
-						${playerTypeError}
+						<span style="color:red">${playerTypeError}</span>
 						<br><br> 
 						
 		Food Preference : 
@@ -27,7 +27,7 @@
 						<option value="Regular" >Regular</option>
 						<option value="Jain" >Jain</option>
 					</select>	
-					${foodPreferenceError}
+					<span style="color:red">${foodPreferenceError}</span>
 					<br><br>
 		Drink : 
 				RB	<input type="checkbox" name="drink" value="rb"/> 

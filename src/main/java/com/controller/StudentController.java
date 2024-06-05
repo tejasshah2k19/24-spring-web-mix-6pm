@@ -24,10 +24,17 @@ public class StudentController {
 		System.out.println(studentBox.getDrink());
 
 		boolean isError = false;
-
+		String alphaRegEx = "[a-zA-Z]+";//a-zA-z ? min : 1 max : n time 
+		
+		
 		if (studentBox.getStudentName() == null || studentBox.getStudentName().trim().length() == 0) {
 			isError = true;
 			model.addAttribute("studentNameError","Please Enter Student Name");
+		}else if(studentBox.getStudentName().matches(alphaRegEx) == false) {
+			isError = true; 
+			model.addAttribute("studentNameError","Please Enter Valid Student Name");
+		}else {
+			model.addAttribute("studentNameValue",studentBox.getStudentName());
 		}
 
 		if (studentBox.getPlayerType() == null) {
