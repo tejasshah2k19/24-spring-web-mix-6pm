@@ -24,34 +24,51 @@ public class StudentController {
 		System.out.println(studentBox.getDrink());
 
 		boolean isError = false;
-		String alphaRegEx = "[a-zA-Z]+";//a-zA-z ? min : 1 max : n time 
-		
-		
+		String alphaRegEx = "[a-zA-Z]+";// a-zA-z ? min : 1 max : n time
+
 		if (studentBox.getStudentName() == null || studentBox.getStudentName().trim().length() == 0) {
 			isError = true;
-			model.addAttribute("studentNameError","Please Enter Student Name");
-		}else if(studentBox.getStudentName().matches(alphaRegEx) == false) {
-			isError = true; 
-			model.addAttribute("studentNameError","Please Enter Valid Student Name");
-		}else {
-			model.addAttribute("studentNameValue",studentBox.getStudentName());
+			model.addAttribute("studentNameError", "Please Enter Student Name");
+		} else if (studentBox.getStudentName().matches(alphaRegEx) == false) {
+			isError = true;
+			model.addAttribute("studentNameError", "Please Enter Valid Student Name");
+		} else {
+			model.addAttribute("studentNameValue", studentBox.getStudentName());
 		}
 
 		if (studentBox.getPlayerType() == null) {
 			isError = true;
-			model.addAttribute("playerTypeError","Please Select PlayerType");
+			model.addAttribute("playerTypeError", "Please Select PlayerType");
+		} else {
+			model.addAttribute("playerTypeValue", studentBox.getPlayerType());
 		}
 
 		if (studentBox.getFoodPreference().equals("-1") == true) {
 			isError = true;
-			model.addAttribute("foodPreferenceError","Please Selecct FoodPreference");
+			model.addAttribute("foodPreferenceError", "Please Select FoodPreference");
+		} else {
+			model.addAttribute("foodPreferenceValue", studentBox.getFoodPreference());// regular
 		}
+
+		// if none -> drink - null
+		// drink=>rb
+		// drink=>rb,co
+
+		if (studentBox.getDrink() == null) {
+			isError = true;
+			model.addAttribute("drinkError", "Please Select Atleast one Drink");
+
+		} else {
+			model.addAttribute("drinkValue", studentBox.getDrink());
+		}
+
+		model.addAttribute("reg", studentBox);//reg.playerType reg.drink 
 
 		if (isError == true) {
 			return "BoxCricketReg";
 		} else {
 			// how to send data to jsp from controller ?
-			model.addAttribute("reg", studentBox);// data name -> data value
+			// model.addAttribute("reg", studentBox);// data name -> data value
 			return "RegDetail";
 		}
 	}
