@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import com.bean.StudentBoxCricketBean;
+import com.util.Validators;
 
 @Controller
 public class StudentController {
@@ -26,10 +27,10 @@ public class StudentController {
 		boolean isError = false;
 		String alphaRegEx = "[a-zA-Z]+";// a-zA-z ? min : 1 max : n time
 
-		if (studentBox.getStudentName() == null || studentBox.getStudentName().trim().length() == 0) {
+		if (Validators.isBlank(studentBox.getStudentName())) {
 			isError = true;
 			model.addAttribute("studentNameError", "Please Enter Student Name");
-		} else if (studentBox.getStudentName().matches(alphaRegEx) == false) {
+		} else if (Validators.isAlpha(studentBox.getStudentName()) == false) {
 			isError = true;
 			model.addAttribute("studentNameError", "Please Enter Valid Student Name");
 		} else {
@@ -62,7 +63,7 @@ public class StudentController {
 			model.addAttribute("drinkValue", studentBox.getDrink());
 		}
 
-		model.addAttribute("reg", studentBox);//reg.playerType reg.drink 
+		model.addAttribute("reg", studentBox);//reg.playerType reg.drink reg.studentName reg.foodPreference
 
 		if (isError == true) {
 			return "BoxCricketReg";

@@ -82,6 +82,105 @@ validation ->
 
 
 
+----------------------------------------------------------
+1) github.com -> login { signup }
+2) git tools -> 
+
+
+git 
+github 
+local repo
+remote repo 
+
+push  : upload
+pull  : download 
+
+
+
+git status 
+
+git add pom.xml 
+git add src
+
+
+git add pom.xml src 
+
+git commit -m "init" src pom.xml 
+  
+
+git push origin master 
+git push origin main 
+git push -u origin main
+
+--------------------------------------------------------
+
+oracle/mysql/pg
+
+
+mysql -> XAMP  
+
+
+query -> 
+
+---------------------------------------------------------
+
+spring application -> mysql db -> connection 
+
+steps for database connection:- 
+
+step 1:
+
+1) mysql-connector {maven}    
+2) spring jdbc 	   {maven}
+
+
+step 2: 
+	map your configuration into application.properties 
+	1) url:dbName
+	2) userName
+	3) password   
+
+	jdbc:mysql://localhost:3306/springmix
+	root
+	root
+
+
+
+
+#database
+spring.datasource.url=jdbc:mysql://localhost:3306/springmix
+spring.datasource.username=root
+spring.datasource.password=root
+
+create database springmix; 
+
+------------------------------------------------------------
+
+Connection 
+PreparedStatement pstmt -> 
+				executeQuery() -> SELECT 
+				executeUpdate()-> INSERT,UPDATE,DELETE 
+					
+
+JdbcTemplate pstmt; //new ??
+
+
+
+
+@Autowired 
+JdbcTemplate pstmt; 
+				query() -> SELECT 
+				update()-> INSERT,UPDATE,DELETE 
+				queryXXX();
+
+
+--------------------------------------------------------------
+
+where we can write database query -> dao 
+
+what is the full name of DAO -> data access object 
+
+----------------------------------------------------------------------
 
 
 
@@ -100,4 +199,32 @@ validation ->
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+	
+	
+	
+	
+	
 	
