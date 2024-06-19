@@ -5,9 +5,13 @@ public class EProductBean {
 	private Integer productId;
 	private String productName;
 	private String category;
-	private Integer qty;
+	private Integer qty;// int qty
 	private Float price;
 
+	
+	//framework -> hibernate -> primitive X 
+	//
+	
 	public Integer getProductId() {
 		return productId;
 	}

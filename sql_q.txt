@@ -31,3 +31,29 @@ insert into users(firstName,email,password) values ('rock','rock@gmail.com','roc
  	qty int,
  	price float
  );
+ 
+ 
+select * from products; 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

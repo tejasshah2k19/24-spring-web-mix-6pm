@@ -247,6 +247,43 @@ call dao's method from controller
 
 ----------------------------------------------------------------
 
+
+which method we will use to execute select query using jdbc template? 
+
+which annotation we will use for dao?
+
+______ annotation is used to inject dependency?
+instance -> X new -> 
+
+___Sterotype________ type of annotations are widely used in spring!
+
+----------------------------------------------------------------------
+
+login -> home -> products -> 
+ SELECT -> multiple record -> READ : LIST 
+ list-> 
+ 
+ select * from products;
+ 
+stmt.query(arg1,arg2);
+stmt.query(arg1,arg2,arg3);
+ 
+
+
+stmt.query(String,BeanPropertyRowMapper);
+arg1=>String =>sql Query
+arg2=>BeanPropertyRowMapper=>instance 
+ 
+ 
+ 
+select * from products; 
+
+productId name category price 
+1
+2
+3
+4
+5
  
 
 
