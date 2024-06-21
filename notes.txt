@@ -284,6 +284,14 @@ productId name category price
 3
 4
 5
+ ------------------------------------
+ 
+ delete from products where productId = ? 
+ 
+ 
+ deleteproduct
+ 
+ url -> data -> ? -> query string 
  
 
 

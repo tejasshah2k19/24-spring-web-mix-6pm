@@ -11,6 +11,7 @@
 <body>
 	<h2>List Products</h2>
 
+<a href="newproduct">New Product</a><br><br>
 	<%
 	List<EProductBean> products = (List<EProductBean>) request.getAttribute("products");
 	%>
@@ -19,18 +20,19 @@
 		<tr>
 			<th>ProductId</th>
 			<th>ProductName</th>
+			<th>Action</th>
 		</tr>
 		<%
 		for (EProductBean p : products) {
 			out.print("<tr>");
-			out.print("<td>" + p.getProductId() + "</td><td>" + p.getProductName() + "</td>");
+			out.print("<td>" + p.getProductId() + "</td><td>" + p.getProductName() + "</td><td><a href='deleteproduct?productId="+p.getProductId()+"'>Delete</a></td>");
 			out.print("</tr>");
 
 		}
 		%>
 
-
-
+	 
+	 
 	</table>
 </body>
 </html>

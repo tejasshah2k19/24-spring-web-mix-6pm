@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.bean.EProductBean;
 import com.dao.EProductDao;
@@ -29,23 +30,31 @@ public class EProductController {
 		// validation using XX
 
 		// dao insert
-		productDao.addProduct(productBean);//argument 
-		return "Welcome";// X
+		productDao.addProduct(productBean);// argument
+
+		return "redirect:/products";// url call
+
+		// return jspname
+//		return redirect:/url 
+
 	}
-	
+
 	@GetMapping("/products")
 	public String listProducts(Model model) {
-		List<EProductBean> products  = productDao.getAllProducts();//return type 
-		
-		model.addAttribute("products",products);
-		
+		List<EProductBean> products = productDao.getAllProducts();// return type
+
+		model.addAttribute("products", products);
+
 		return "EcomListProducts";
 	}
+
+	@GetMapping("/deleteproduct")
+	public String deleteProduct(@RequestParam("productId") Integer productId) {
 	
-	
-	
-	
-	
+		System.out.println("deleteProduct() => "+productId );
+		
+		return "redirect:/products";
+	}
 	
 	
 }

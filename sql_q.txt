@@ -37,6 +37,15 @@ select * from products;
 
  
  
+ -----------------------------------
+ 
+ delete from tablename; 
+ 
+ delete from products; ==> remove all records 
+ 
+ delete from products where productId = 1
+ 
+  
  
  
  
