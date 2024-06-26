@@ -294,6 +294,10 @@ productId name category price
  url -> data -> ? -> query string 
  
 
+-------------------------------------------------
+
+List<Bean> 
+
 
 
 
