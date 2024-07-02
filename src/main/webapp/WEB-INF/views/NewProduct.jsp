@@ -14,6 +14,7 @@
 		<br> Category: <input type="text" name="category" /><br>
 		<br> Price: <input type="text" name="price" /><Br>
 		<br> Qty:<input type="Text" name="qty" /><BR><br>
+		
 		MasterImage : <input type="file" name="masterImage"/><br><BR> 
 		
 		
