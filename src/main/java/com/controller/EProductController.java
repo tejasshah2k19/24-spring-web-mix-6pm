@@ -1,10 +1,7 @@
 package com.controller;
 
-import java.io.File;
-import java.io.IOException;
 import java.util.List;
 
-import org.apache.commons.io.FileUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -15,14 +12,13 @@ import org.springframework.web.multipart.MultipartFile;
 
 import com.bean.EProductBean;
 import com.dao.EProductDao;
-import com.service.AwsS3Service;
 import com.service.FileUploadService;
 
 @Controller
 public class EProductController {
 
-	@Autowired
-	AwsS3Service s3;
+	//@Autowired
+	//AwsS3Service s3;
 
 	@Autowired
 	EProductDao productDao;
