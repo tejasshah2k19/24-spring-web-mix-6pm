@@ -9,8 +9,8 @@ public class EUserBean {
 	private String firstName;
 	private String email;
 	private String password;
-	private MultipartFile profilePic;
-	private String profilePicPath; 
+	private MultipartFile profilePic;//image
+	private String profilePicPath; //path->image save 
 	
 
 	public Integer getUserId() {
