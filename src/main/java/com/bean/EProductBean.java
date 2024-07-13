@@ -7,11 +7,11 @@ public class EProductBean {
 	private String category;
 	private Integer qty;// int qty
 	private Float price;
+	private String productImagePath;
 
-	
-	//framework -> hibernate -> primitive X 
+	// framework -> hibernate -> primitive X
 	//
-	
+
 	public Integer getProductId() {
 		return productId;
 	}
@@ -50,6 +50,14 @@ public class EProductBean {
 
 	public void setPrice(Float price) {
 		this.price = price;
+	}
+
+	public String getProductImagePath() {
+		return productImagePath;
+	}
+
+	public void setProductImagePath(String productImagePath) {
+		this.productImagePath = productImagePath;
 	}
 
 	// private
