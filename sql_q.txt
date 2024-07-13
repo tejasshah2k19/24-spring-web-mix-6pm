@@ -46,7 +46,16 @@ select * from products;
  delete from products where productId = 1
  
   
+ ---------------------------------------------
  
+ 
+ create table cart (
+ 	cartId int primary key auto_increment,
+ 	productId int, 
+ 	userId int  
+ );
+ 
+ ------------------------------------------- 
  
  
  

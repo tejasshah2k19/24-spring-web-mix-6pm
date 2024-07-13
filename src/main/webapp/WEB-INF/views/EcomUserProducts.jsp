@@ -12,6 +12,11 @@
 	integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
 	crossorigin="anonymous">
 
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+	integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+	crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 <style type="text/css">
 @import
 	url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap')
@@ -185,6 +190,13 @@ a, a:hover {
 	%>
 
 
+	<div class="row">
+		<div class="col-md">
+			
+			<a href="logout">Logout</a>
+
+		</div>
+	</div>
 
 	<section class="section-products">
 		<div class="container">
@@ -201,26 +213,26 @@ a, a:hover {
 
 				<!-- start -->
 				<%
-				for (EProductBean p:products) {
+				for (EProductBean p : products) {
 				%>
 				<!-- Single Product -->
 				<div class="col-md-6 col-lg-4 col-xl-3">
 					<div id="product-1" class="single-product">
 						<div class="part-1">
-							<a href="userviewimage?productId=<%=p.getProductId()%>">
-							<img src="<%=p.getProductImagePath()%>" />
+							<a href="userviewimage?productId=<%=p.getProductId()%>"> <img
+								src="<%=p.getProductImagePath()%>" height="100%" width="100%" />
 							</a>
 							<ul>
-								<li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+								<li><a href="addtocart?productId=<%=p.getProductId()%>"><i
+										class="fas fa-shopping-cart"></i></a></li>
 								<li><a href="#"><i class="fas fa-heart"></i></a></li>
-								<li><a href="#"><i class="fas fa-plus"></i></a></li>
-								<li><a href="#"><i class="fas fa-expand"></i></a></li>
+								<li><a href="#"><i class="fas fa-eye"></i></a></li>
 							</ul>
 						</div>
 						<div class="part-2">
-							<h3 class="product-title"><%=p.getProductName() %></h3>
-							<h4 class="product-old-price"><%=p.getPrice()*0.05+p.getPrice() %></h4>
-							<h4 class="product-price"><%=p.getPrice() %></h4>
+							<h3 class="product-title"><%=p.getProductName()%></h3>
+							<h4 class="product-old-price"><%=p.getPrice() * 0.05 + p.getPrice()%></h4>
+							<h4 class="product-price"><%=p.getPrice()%></h4>
 						</div>
 					</div>
 				</div>

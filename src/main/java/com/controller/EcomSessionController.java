@@ -14,6 +14,7 @@ import com.dao.EUserDao;
 import com.service.FileUploadService;
 
 import jakarta.servlet.http.HttpSession;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class EcomSessionController {
@@ -46,7 +47,7 @@ public class EcomSessionController {
 
 			session.setAttribute("user", dbUser);
 			model.addAttribute("firstName", dbUser.getFirstName());
-			model.addAttribute("profilePicPath", dbUser.getProfilePicPath());	
+			model.addAttribute("profilePicPath", dbUser.getProfilePicPath());
 			return "EcomHome";
 		}
 	}
@@ -79,4 +80,12 @@ public class EcomSessionController {
 
 		return "EcomLogin";
 	}
+
+	@GetMapping("/logout")
+	public String logout(HttpSession session) {
+		//destroy session 
+		session.invalidate();
+		return "redirect:/elogin";
+	}
+
 }
