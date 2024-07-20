@@ -193,7 +193,8 @@ a, a:hover {
 	<div class="row">
 		<div class="col-md">
 			
-			<a href="logout">Logout</a>
+			<a href="logout">Logout</a> | 
+			<a href="mycart">MyCart</a>
 
 		</div>
 	</div>
@@ -226,7 +227,7 @@ a, a:hover {
 								<li><a href="addtocart?productId=<%=p.getProductId()%>"><i
 										class="fas fa-shopping-cart"></i></a></li>
 								<li><a href="#"><i class="fas fa-heart"></i></a></li>
-								<li><a href="#"><i class="fas fa-eye"></i></a></li>
+								<li><a href="viewproduct?productId=<%=p.getProductId()%>"><i class="fas fa-eye"></i></a></li>
 							</ul>
 						</div>
 						<div class="part-2">
