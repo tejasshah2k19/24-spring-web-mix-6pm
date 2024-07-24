@@ -58,6 +58,7 @@ public class EcomSessionController {
 		// jsp form -> controller ->
 		// validation
 
+		// // images//profilepic//rock1@gmail.com//123.png
 		fileUploadService.uploadUserImage(userBean.getProfilePic(), userBean.getEmail());
 
 		// images//profilepic//rock1@gmail.com//123.png
@@ -79,7 +80,7 @@ public class EcomSessionController {
 
 	@GetMapping("/logout")
 	public String logout(HttpSession session) {
-		//destroy session 
+		// destroy session
 		session.invalidate();
 		return "redirect:/elogin";
 	}
