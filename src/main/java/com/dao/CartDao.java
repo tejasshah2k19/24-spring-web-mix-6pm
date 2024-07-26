@@ -9,6 +9,7 @@ import org.springframework.stereotype.Repository;
 
 import com.bean.ECartBean;
 import com.bean.EProductBean;
+import com.bean.ProductCartBean;
 
 @Repository
 public class CartDao {
@@ -44,11 +45,11 @@ public class CartDao {
 
 	}
 
-	public List<EProductBean> myCart(Integer userId) {
+	public List<ProductCartBean> myCart(Integer userId) {
 		// select * from products join cart using (productId) where userId= 1;
 
-		List<EProductBean> products = stmt.query(" select * from products join cart using (productId) where userId= ?",
-				new BeanPropertyRowMapper<>(EProductBean.class), new Object[] { userId });
+		List<ProductCartBean> products = stmt.query(" select c.*,p.price,p.productName,p.productImagePath from products p join cart c using (productId) where userId= ?",
+				new BeanPropertyRowMapper<>(ProductCartBean.class), new Object[] { userId });
 		return products;
 	}
 
