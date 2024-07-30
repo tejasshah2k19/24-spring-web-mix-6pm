@@ -296,8 +296,12 @@ productId name category price
 
 -------------------------------------------------
 
-List<Bean> 
+mail -> send -> 
 
+1) java mail api -> pom.xml  { spring starter , maven } 
+
+
+ 
 
 
 
